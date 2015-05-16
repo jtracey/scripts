@@ -1,4 +1,8 @@
 #! /bin/sh
+
+## Takes two directories as arguments, plus an optional third, and outputs any files that are present in the first two dirs but contain some diffence, ignoring everything in the third directory.
+## There's probably an easier way to do this I didn't think of.
+
 dirA="$(readlink -e "$1")/"
 dirB="$(readlink -e "$2")/"
 ignore="$(readlink -e "$3")/"
